@@ -25,4 +25,20 @@ return {
    		},
    	},
    },
+
+  {
+    "github/copilot.vim",
+    event = "InsertEnter",
+    cmd = "Copilot",
+    config = function()
+      -- Disable default mappings
+      vim.g.copilot_no_tab_map = true
+      vim.keymap.set('i', '<A-l>', 'copilot#Accept("<CR>")', {
+        expr = true,
+        silent = true
+      })
+      vim.keymap.set('i', '<A-j>', '<Plug>(copilot-next)')
+      vim.keymap.set('i', '<A-k>', '<Plug>(copilot-previous)')
+    end,
+  }
 }
