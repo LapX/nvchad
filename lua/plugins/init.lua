@@ -21,7 +21,7 @@ return {
    	opts = {
    		ensure_installed = {
    			"vim", "lua", "vimdoc",
-        "html", "css"
+        "html", "css", "javascript", "typescript", "tsx",
    		},
    	},
    },
@@ -33,12 +33,26 @@ return {
     config = function()
       -- Disable default mappings
       vim.g.copilot_no_tab_map = true
-      vim.keymap.set('i', '<A-l>', 'copilot#Accept("<CR>")', {
+      vim.keymap.set('i', '<C-e>', 'copilot#Accept("<CR>")', {
         expr = true,
         silent = true
       })
-      vim.keymap.set('i', '<A-j>', '<Plug>(copilot-next)')
-      vim.keymap.set('i', '<A-k>', '<Plug>(copilot-previous)')
+      vim.keymap.set('i', '<C-j>', '<Plug>(copilot-next)')
+      vim.keymap.set('i', '<C-k>', '<Plug>(copilot-previous)')
     end,
+  },
+
+  {
+    "windwp/nvim-ts-autotag",
+    ft = {
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "html",
+    },
+    config = function()
+      require("nvim-ts-autotag").setup()
+    end
   }
 }
