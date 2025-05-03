@@ -1,7 +1,7 @@
 return {
   {
     "stevearc/conform.nvim",
-    event = 'BufWritePre', -- uncomment for format on save
+    event = "BufWritePre", -- uncomment for format on save
     opts = require "configs.conform",
   },
 
@@ -14,17 +14,24 @@ return {
   },
 
   -- test new blink
-   { import = "nvchad.blink.lazyspec" },
+  { import = "nvchad.blink.lazyspec" },
 
-   {
-   	"nvim-treesitter/nvim-treesitter",
-   	opts = {
-   		ensure_installed = {
-   			"vim", "lua", "vimdoc",
-        "html", "css", "javascript", "typescript", "tsx",
-   		},
-   	},
-   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "javascript",
+        "typescript",
+        "tsx",
+        "vue",
+      },
+    },
+  },
 
   {
     "github/copilot.vim",
@@ -33,12 +40,12 @@ return {
     config = function()
       -- Disable default mappings
       vim.g.copilot_no_tab_map = true
-      vim.keymap.set('i', '<C-e>', 'copilot#Accept("<CR>")', {
+      vim.keymap.set("i", "<C-e>", 'copilot#Accept("<CR>")', {
         expr = true,
-        silent = true
+        silent = true,
       })
-      vim.keymap.set('i', '<C-j>', '<Plug>(copilot-next)')
-      vim.keymap.set('i', '<C-k>', '<Plug>(copilot-previous)')
+      vim.keymap.set("i", "<C-j>", "<Plug>(copilot-next)")
+      vim.keymap.set("i", "<C-k>", "<Plug>(copilot-previous)")
     end,
   },
 
@@ -50,9 +57,10 @@ return {
       "typescript",
       "typescriptreact",
       "html",
+      "vue",
     },
     config = function()
       require("nvim-ts-autotag").setup()
-    end
-  }
+    end,
+  },
 }
