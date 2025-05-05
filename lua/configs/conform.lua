@@ -8,6 +8,7 @@ local options = {
     typescript = { "prettier" },
     typescriptreact = { "prettier" },
     vue = { "prettier" },
+    json = { "prettier" },
   },
 
   format_on_save = {
