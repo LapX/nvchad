@@ -9,6 +9,7 @@ local options = {
     typescriptreact = { "prettier" },
     vue = { "prettier" },
     json = { "prettier" },
+    python = { "black" },
   },
 
   format_on_save = {
