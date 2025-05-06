@@ -10,6 +10,7 @@ local options = {
     vue = { "prettier" },
     json = { "prettier" },
     python = { "black" },
+    svelte = { "prettier" },
   },
 
   format_on_save = {

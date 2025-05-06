@@ -30,6 +30,7 @@ return {
         "typescript",
         "tsx",
         "vue",
+        "svelte",
       },
     },
   },
