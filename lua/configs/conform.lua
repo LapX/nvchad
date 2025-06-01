@@ -11,6 +11,7 @@ local options = {
     json = { "prettier" },
     python = { "black" },
     svelte = { "prettier" },
+    rust = { "rustfmt" },
   },
 
   format_on_save = {

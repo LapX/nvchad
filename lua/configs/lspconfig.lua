@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "ts_ls", "tailwindcss", "volar", "pyright", "svelte" }
+local servers = { "html", "cssls", "ts_ls", "tailwindcss", "volar", "pyright", "svelte", "rust_analyzer" }
 vim.lsp.enable(servers)
 
 local mason_registry = require "mason-registry"

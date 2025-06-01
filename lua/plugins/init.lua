@@ -31,6 +31,7 @@ return {
         "tsx",
         "vue",
         "svelte",
+        "rust",
       },
     },
   },
