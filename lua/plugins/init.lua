@@ -36,21 +36,21 @@ return {
     },
   },
 
-  {
-    "github/copilot.vim",
-    event = "InsertEnter",
-    cmd = "Copilot",
-    config = function()
-      -- Disable default mappings
-      vim.g.copilot_no_tab_map = true
-      vim.keymap.set("i", "<C-e>", 'copilot#Accept("<CR>")', {
-        expr = true,
-        silent = true,
-      })
-      vim.keymap.set("i", "<C-j>", "<Plug>(copilot-next)")
-      vim.keymap.set("i", "<C-k>", "<Plug>(copilot-previous)")
-    end,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   event = "InsertEnter",
+  --   cmd = "Copilot",
+  --   config = function()
+  --     -- Disable default mappings
+  --     vim.g.copilot_no_tab_map = true
+  --     vim.keymap.set("i", "<C-e>", 'copilot#Accept("<CR>")', {
+  --       expr = true,
+  --       silent = true,
+  --     })
+  --     vim.keymap.set("i", "<C-j>", "<Plug>(copilot-next)")
+  --     vim.keymap.set("i", "<C-k>", "<Plug>(copilot-previous)")
+  --   end,
+  -- },
 
   {
     "windwp/nvim-ts-autotag",
