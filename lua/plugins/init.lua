@@ -71,4 +71,22 @@ return {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
+
+  {
+    "sindrets/diffview.nvim",
+    cmd = {
+      "DiffviewOpen",
+      "DiffviewFileHistory",
+      "DiffviewClose",
+      "DiffviewToggleFiles",
+      "DiffviewFocusFiles",
+      "DiffviewRefresh",
+    },
+    keys = {
+      { "<leader>gd", "<cmd>DiffviewOpen<CR>", desc = "Git diff view" },
+      { "<leader>gh", "<cmd>DiffviewFileHistory %<CR>", desc = "Git file history" },
+      { "<leader>gH", "<cmd>DiffviewFileHistory<CR>", desc = "Git branch history" },
+      { "<leader>gq", "<cmd>DiffviewClose<CR>", desc = "Git diff close" },
+    },
+  },
 }
