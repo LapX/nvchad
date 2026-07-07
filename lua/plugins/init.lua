@@ -18,10 +18,13 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    branch = "main",
     opts = {
       ensure_installed = {
         "vim",
         "lua",
+        "luadoc",
+        "printf",
         "vimdoc",
         "html",
         "css",
@@ -32,6 +35,8 @@ return {
         "vue",
         "svelte",
         "rust",
+        "markdown",
+        "markdown_inline",
       },
     },
   },
